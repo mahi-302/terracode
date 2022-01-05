@@ -1,6 +1,6 @@
 node('main'){
     stage('pulling'){
-       git branch: 'main', url: 'https://github.com/mahi-302/lb.git'
+       git branch: 'main', url: 'https://github.com/mahi-302/module1.git'
         sh "ls"
     }
     stage('lb'){
@@ -11,7 +11,7 @@ node('main'){
     stage('pushing data'){
         sh "git add terraform.tfstate"
         sh "git commit -m 'terraform'"
-        sh "git remote set-url origin https://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@github.com/mahi-302/lb.git"
+        sh "git remote set-url origin https://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@github.com/mahi-302/module1.git"
         sh "git push --set-upstream origin main"
        }
     }
